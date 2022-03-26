@@ -7,7 +7,7 @@ module.exports = {
         try {
             return await citiesRepository.getCityDataByZipCode(zipCode);
 
-        } catch (error) {
+        } catch {
             throw new NotFoundError(`No cities found!`);
         }
 

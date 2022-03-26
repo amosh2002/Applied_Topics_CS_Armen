@@ -7,7 +7,12 @@ module.exports = {
             method: 'get',
             url: "https://api.zippopotam.us/us/" + zipCode
         });
-        return cityInfo.data;
+        const retrievedData = cityInfo.data;
+        const retrievedDataPlaces = retrievedData['places'][0];
+
+        return `${retrievedDataPlaces['place name']},
+            ${retrievedDataPlaces['state abbreviation']},
+            ${retrievedData['country']}`;
     }
 
 }
