@@ -1,4 +1,4 @@
-const NotFoundError = require('../error/not-found.error');
+const NotFoundError = require('../errors/not-found.error');
 
 module.exports = (err, req, res, next) => {
 
