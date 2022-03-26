@@ -3,8 +3,7 @@ const app = express();
 const citiesController = require('./cities/cities.controller');
 
 
-const port = 3000;
-app.listen(port, () => {
+app.listen(3000, () => {
     console.log(`App is running on port ${port}.`);
 })
 
