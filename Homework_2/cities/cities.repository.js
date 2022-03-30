@@ -1,12 +1,16 @@
 const axios = require('axios');
 
-module.exports = {
+let cityInfo;
 
+async function getAxiosResult(zipCode) {
+    return await axios.get(
+        "https://api.zippopotam.us/us/" + zipCode
+    );
+}
+module.exports = {
     async getCityDataByZipCode(zipCode) {
-        const cityInfo = await axios({
-            method: 'get',
-            url: "https://api.zippopotam.us/us/" + zipCode
-        });
+        let cityInfo = await getAxiosResult(zipCode);
+
         const retrievedData = cityInfo.data;
         const retrievedDataPlaces = retrievedData['places'][0];
 

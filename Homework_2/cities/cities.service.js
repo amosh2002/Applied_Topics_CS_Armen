@@ -1,5 +1,5 @@
 const NotFoundError = require('../common/errors/not-found.error');
-const citiesRepository = require('./cities.repository');
+let citiesRepository = require('./cities.repository');
 
 module.exports = {
 
