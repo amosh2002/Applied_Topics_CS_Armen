@@ -17,7 +17,7 @@ describe("Testing cities.repository file.", function () {
         citiesRepository.__set__("cityInfo", stubbeedAxiosGet);
 
         it("Returns a city data correctly (working with stub).", function () {
-            expect(citiesRepository.getCityDataByZipCode("90210").should.eventually.be.equal('Beverly Hills, CA, United States'));
+            citiesRepository.getCityDataByZipCode("90210").should.eventually.be.equal('Beverly Hills, CA, United States');
         })
 
         it("Check called only once", function () {

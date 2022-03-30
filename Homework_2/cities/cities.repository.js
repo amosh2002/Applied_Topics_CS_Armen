@@ -9,7 +9,7 @@ async function getAxiosResult(zipCode) {
 }
 module.exports = {
     async getCityDataByZipCode(zipCode) {
-        let cityInfo = await getAxiosResult(zipCode);
+        cityInfo = await getAxiosResult(zipCode);
 
         const retrievedData = cityInfo.data;
         const retrievedDataPlaces = retrievedData['places'][0];
